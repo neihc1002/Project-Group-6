@@ -5,6 +5,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Models;
+using X.PagedList;
 
 namespace Repositories
 {
@@ -54,9 +55,9 @@ namespace Repositories
         /// </summary>
         /// <remarks>Asynchronous</remarks>
         /// <returns>An ICollection of every object in the database</returns>
-        public async Task<ICollection<TObject>> GetAllAsync()
+        public async Task<IEnumerable<TObject>> GetAllAsync(int num,int page, Func<TObject,object> orderBy, Expression<Func<TObject, bool>> match)
         {
-            return await _context.Set<TObject>().ToListAsync();
+            return await _context.Set<TObject>().Where(match).AsEnumerable().OrderBy(orderBy).ToPagedList(num, page).ToListAsync();
         }
         /// <summary>
         /// Returns a single object which matches the provided expression
@@ -96,7 +97,7 @@ namespace Repositories
         /// <remarks>Asynchronous</remarks>
         /// <param name="match">A linq expression filter to find one or more results</param>
         /// <returns>An ICollection of object which match the expression filter</returns>
-        public async Task<ICollection<TObject>> FindAllAsync(Expression<Func<TObject, bool>> match)
+        public async Task<IEnumerable<TObject>> FindAllAsync(Expression<Func<TObject, bool>> match)
         {
             return await _context.Set<TObject>().Where(match).ToListAsync();
         }
@@ -121,7 +122,9 @@ namespace Repositories
         public async Task<TObject> AddAsync(TObject t)
         {
             _context.Set<TObject>().Add(t);
-            await _context.SaveChangesAsync();
+            int result =await _context.SaveChangesAsync();
+            if (result < 0)
+                return null;
             return t;
         }
         /// <summary>

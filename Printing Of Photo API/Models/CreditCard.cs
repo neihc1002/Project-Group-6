@@ -15,6 +15,7 @@ namespace Models
         }
 
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("credit_card_id")]
         public long CreditCardId { get; set; }
 

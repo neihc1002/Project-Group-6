@@ -15,6 +15,7 @@ namespace Models
 
         [Key]
         [Column("material_id")]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int MaterialId { get; set; }
 
         [StringLength(50)]

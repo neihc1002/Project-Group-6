@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Dynamic;
 using System.Linq;
@@ -13,11 +14,11 @@ namespace Repositories
         TObject Get(long id);
         Task<TObject> GetAsync(long id);
         ICollection<TObject> GetAll();
-        Task<ICollection<TObject>> GetAllAsync();
+        Task<IEnumerable<TObject>> GetAllAsync(int num,int page,Func<TObject,object> orderBy, Expression<Func<TObject, bool>> match);
         TObject Find(Expression<Func<TObject, bool>> match);
         Task<TObject> FindAsync(Expression<Func<TObject, bool>> match);
         ICollection<TObject> FindAll(Expression<Func<TObject, bool>> match);
-        Task<ICollection<TObject>> FindAllAsync(Expression<Func<TObject, bool>> match);
+        Task<IEnumerable<TObject>> FindAllAsync(Expression<Func<TObject, bool>> match);
         TObject Add(TObject t);
         Task<TObject> AddAsync(TObject t);
         TObject Update(TObject updated, long key);

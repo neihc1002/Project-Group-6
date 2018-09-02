@@ -9,26 +9,24 @@ namespace Models
     public partial class Size: ModelExtension
     {
 
-        public Size()
-        {
-            OrderDetails = new HashSet<OrderDetail>();
-        }
 
         [Key]
         [Column("size_id")]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int SizeId { get; set; }
 
         [StringLength(50)]
         [Column("size_name")]
+        [Required]
         public string SizeName { get; set; }
 
         [Column("size")]
         [StringLength(20)]
+        [Required]
         public string SizeDetails { get; set; }
 
         [Column("size_price",TypeName = "money")]
-        public decimal? SizePrice { get; set; }
+        public decimal SizePrice { get; set; }
 
-        public virtual ICollection<OrderDetail> OrderDetails { get; set; }
     }
 }

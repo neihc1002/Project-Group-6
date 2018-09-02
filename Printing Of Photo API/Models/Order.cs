@@ -15,6 +15,7 @@ namespace Models
 
         [Key]
         [Column("order_id")]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long OrderId { get; set; }
         [Column("customer_id")]
         public long? CustomerId { get; set; }

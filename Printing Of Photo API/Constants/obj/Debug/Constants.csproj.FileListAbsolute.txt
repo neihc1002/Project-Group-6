@@ -4,3 +4,9 @@ D:\Drive\MyLaptop\Printing Of Photo API\Constants\obj\Debug\Constants.csprojAsse
 D:\Drive\MyLaptop\Printing Of Photo API\Constants\obj\Debug\Constants.csproj.CoreCompileInputs.cache
 D:\Drive\MyLaptop\Printing Of Photo API\Constants\obj\Debug\Constants.dll
 D:\Drive\MyLaptop\Printing Of Photo API\Constants\obj\Debug\Constants.pdb
+F:\ProjectSemIV\Printing Of Photo API\Constants\bin\Debug\Constants.dll
+F:\ProjectSemIV\Printing Of Photo API\Constants\bin\Debug\Constants.pdb
+F:\ProjectSemIV\Printing Of Photo API\Constants\obj\Debug\Constants.csprojAssemblyReference.cache
+F:\ProjectSemIV\Printing Of Photo API\Constants\obj\Debug\Constants.csproj.CoreCompileInputs.cache
+F:\ProjectSemIV\Printing Of Photo API\Constants\obj\Debug\Constants.dll
+F:\ProjectSemIV\Printing Of Photo API\Constants\obj\Debug\Constants.pdb

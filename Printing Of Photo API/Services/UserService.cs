@@ -24,8 +24,12 @@ namespace Services
         {
             User user = _repositoryUser.Find(u =>
                 u.Username == username && u.Status.Equals(UserStatus.Active));
-            if (password.Equals(_hashingData.DecryptString(user.Password, AppSettingConstant.PasswordHash)))
+            if(user!=null)
+            {
+                if (password.Equals(_hashingData.DecryptString(user.Password, AppSettingConstant.PasswordHash)))
                 return user;
+            }
+
             return null;
         }
 

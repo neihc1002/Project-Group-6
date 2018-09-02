@@ -1,6 +1,0 @@
-D:\Drive\MyLaptop\Printing Of Photo API\Helper\bin\Release\Helper.dll
-D:\Drive\MyLaptop\Printing Of Photo API\Helper\bin\Release\Helper.pdb
-D:\Drive\MyLaptop\Printing Of Photo API\Helper\obj\Release\Helper.csprojAssemblyReference.cache
-D:\Drive\MyLaptop\Printing Of Photo API\Helper\obj\Release\Helper.csproj.CoreCompileInputs.cache
-D:\Drive\MyLaptop\Printing Of Photo API\Helper\obj\Release\Helper.dll
-D:\Drive\MyLaptop\Printing Of Photo API\Helper\obj\Release\Helper.pdb

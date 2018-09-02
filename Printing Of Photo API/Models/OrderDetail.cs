@@ -10,6 +10,7 @@ namespace Models
     {
         [Key]
         [Column("order_details_id")]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long OrderDetailsId { get; set; }
 
         [Column("order_id")]
